@@ -29,53 +29,47 @@
         private void InitializeComponent()
         {
             labelInitial = new System.Windows.Forms.Label();
-            buttonNo = new System.Windows.Forms.Button();
-            buttonYes = new System.Windows.Forms.Button();
-            buttonOk = new System.Windows.Forms.Button();
+            buttonCancel = new System.Windows.Forms.Button();
+            buttonOkQuit2 = new System.Windows.Forms.Button();
             textBoxQuit2 = new System.Windows.Forms.TextBox();
             textBoxQuit1 = new System.Windows.Forms.TextBox();
+            buttonOkQuit1 = new System.Windows.Forms.Button();
             SuspendLayout();
             // 
             // labelInitial
             // 
             labelInitial.AutoSize = true;
-            labelInitial.Location = new System.Drawing.Point(47, 24);
+            labelInitial.Location = new System.Drawing.Point(25, 20);
             labelInitial.Name = "labelInitial";
             labelInitial.Size = new System.Drawing.Size(138, 15);
             labelInitial.TabIndex = 9;
             labelInitial.Text = "Qual prato você pensou?";
             // 
-            // buttonNo
+            // buttonCancel
             // 
-            buttonNo.Location = new System.Drawing.Point(129, 64);
-            buttonNo.Name = "buttonNo";
-            buttonNo.Size = new System.Drawing.Size(66, 23);
-            buttonNo.TabIndex = 7;
-            buttonNo.Text = "Não";
-            buttonNo.UseVisualStyleBackColor = true;
+            buttonCancel.Location = new System.Drawing.Point(131, 67);
+            buttonCancel.Name = "buttonCancel";
+            buttonCancel.Size = new System.Drawing.Size(66, 23);
+            buttonCancel.TabIndex = 7;
+            buttonCancel.Text = "Cancelar";
+            buttonCancel.UseVisualStyleBackColor = true;
+            buttonCancel.Visible = false;
+            buttonCancel.Click += Close;
             // 
-            // buttonYes
+            // buttonOkQuit2
             // 
-            buttonYes.Location = new System.Drawing.Point(35, 64);
-            buttonYes.Name = "buttonYes";
-            buttonYes.Size = new System.Drawing.Size(66, 23);
-            buttonYes.TabIndex = 6;
-            buttonYes.Text = "Sim";
-            buttonYes.UseVisualStyleBackColor = true;
-            buttonYes.Click += buttonYes_Click;
-            // 
-            // buttonOk
-            // 
-            buttonOk.Location = new System.Drawing.Point(89, 64);
-            buttonOk.Name = "buttonOk";
-            buttonOk.Size = new System.Drawing.Size(46, 23);
-            buttonOk.TabIndex = 10;
-            buttonOk.Text = "Ok";
-            buttonOk.UseVisualStyleBackColor = true;
+            buttonOkQuit2.Location = new System.Drawing.Point(32, 67);
+            buttonOkQuit2.Name = "buttonOkQuit2";
+            buttonOkQuit2.Size = new System.Drawing.Size(66, 23);
+            buttonOkQuit2.TabIndex = 6;
+            buttonOkQuit2.Text = "Ok";
+            buttonOkQuit2.UseVisualStyleBackColor = true;
+            buttonOkQuit2.Visible = false;
+            buttonOkQuit2.Click += buttonOkQuit2_Click;
             // 
             // textBoxQuit2
             // 
-            textBoxQuit2.Location = new System.Drawing.Point(25, 42);
+            textBoxQuit2.Location = new System.Drawing.Point(25, 38);
             textBoxQuit2.Multiline = true;
             textBoxQuit2.Name = "textBoxQuit2";
             textBoxQuit2.Size = new System.Drawing.Size(184, 23);
@@ -84,31 +78,41 @@
             // 
             // textBoxQuit1
             // 
-            textBoxQuit1.Location = new System.Drawing.Point(25, 42);
+            textBoxQuit1.Location = new System.Drawing.Point(25, 38);
             textBoxQuit1.Multiline = true;
             textBoxQuit1.Name = "textBoxQuit1";
             textBoxQuit1.Size = new System.Drawing.Size(184, 23);
             textBoxQuit1.TabIndex = 12;
             textBoxQuit1.Visible = false;
             // 
+            // buttonOkQuit1
+            // 
+            buttonOkQuit1.Location = new System.Drawing.Point(32, 67);
+            buttonOkQuit1.Name = "buttonOkQuit1";
+            buttonOkQuit1.Size = new System.Drawing.Size(66, 23);
+            buttonOkQuit1.TabIndex = 13;
+            buttonOkQuit1.Text = "Ok";
+            buttonOkQuit1.UseVisualStyleBackColor = true;
+            buttonOkQuit1.Visible = false;
+            buttonOkQuit1.Click += buttonOkQuit1_Click;
+            // 
             // FormInitial
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             ClientSize = new System.Drawing.Size(234, 111);
+            Controls.Add(buttonOkQuit1);
             Controls.Add(textBoxQuit1);
             Controls.Add(textBoxQuit2);
-            Controls.Add(buttonOk);
             Controls.Add(labelInitial);
-            Controls.Add(buttonNo);
-            Controls.Add(buttonYes);
-            FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            Controls.Add(buttonCancel);
+            Controls.Add(buttonOkQuit2);
+            FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "FormInitial";
             ShowIcon = false;
-            StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            Text = "Jogo Gourmet";
+            StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -120,5 +124,9 @@
         private System.Windows.Forms.Button buttonOk;
         private System.Windows.Forms.TextBox textBoxQuit2;
         private System.Windows.Forms.TextBox textBoxQuit1;
+        private System.Windows.Forms.Button buttonCancel;
+        private System.Windows.Forms.Button buttonOk2;
+        private System.Windows.Forms.Button buttonOkQuit2;
+        private System.Windows.Forms.Button buttonOkQuit1;
     }
 }
